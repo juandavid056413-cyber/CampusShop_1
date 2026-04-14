@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
   <meta charset="UTF-8">
-  <title>CampusShop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusShop - Inicio</title>
 
   <link rel="stylesheet" href="css/base.css">
 
@@ -18,14 +20,14 @@
 
   <nav class="sidebar">
     <div class="menu-links">
-      <div class="menu-item"><a href="#">Inicio</a></div>
-      <div class="menu-item"><a href="#">Catálogo</a></div>
-      <div class="menu-item"><a href="#">Carrito</a></div>
-      <div class="menu-item"><a href="#">Checkout</a></div>
-      <div class="menu-item"><a href="#">Historial</a></div>
-      <div class="menu-item"><a href="#">Perfil</a></div>
-      <div class="menu-item"><a href="#">Producto</a></div>
-      <div class="menu-item"><a href="#">Vacío</a></div>
+      <div class="menu-item"><a href="index.html">Inicio</a></div>
+      <div class="menu-item"><a href="catalogo.html">Catálogo</a></div>
+      <div class="menu-item"><a href="carrito.html">Carrito</a></div>
+      <div class="menu-item"><a href="checkout.html">Checkout</a></div>
+      <div class="menu-item"><a href="historial.html">Historial</a></div>
+      <div class="menu-item"><a href="perfil.html">Perfil</a></div>
+      <div class="menu-item"><a href="producto.html">Producto</a></div>
+      <div class="menu-item"><a href="vacio.html">Vacío</a></div>
     </div>
   </nav>
 
@@ -38,10 +40,67 @@
     <div class="logo">CampusShop</div>
   </header>
 
-  <main class="hero">
-    <h1>Bienvenido a CampusShop</h1>
-    <p>Explora nuestros productos y disfruta de una experiencia de compra sencilla.</p>
-    <a href="#" class="btn">Ver Catálogo</a>
+  <section class="busqueda">
+    <input type="text" placeholder="Buscar productos, marcas..." class="search-input">
+  </section>
+
+  <main>
+    <section class="hero">
+      <h1>Bienvenido a CampusShop</h1>
+      <p>Explora nuestros productos y disfruta de una experiencia de compra sencilla.</p>
+    </section>
+
+    <section class="categorias">
+      <h2>Categorías Populares</h2>
+      <div class="grid-categorias">
+        <div class="categoria">
+          <h3>Abrigos</h3>
+          <a href="producto.html" class="btn">Ver más</a>
+        </div>
+        <div class="categoria">
+          <h3>Camisetas</h3>
+          <a href="producto.html" class="btn">Ver más</a>
+        </div>
+        <div class="categoria">
+          <h3>Pantalones</h3>
+          <a href="producto.html" class="btn">Ver más</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="novedades">
+      <h2>Novedades para ti</h2>
+      <div class="grid-productos">
+        <div class="producto">
+          <img src="IMAGENES/chaqueta.jpg" alt="Chaqueta de Cuero">
+          <h3>Chaqueta de Cuero</h3>
+          <p>$120.00</p>
+          <a href="carrito.html" class="btn">Agregar al carrito</a>
+        </div>
+        <div class="producto">
+          <img src="IMAGENES/camiseta.jpg" alt="Camiseta Gráfica">
+          <h3>Camiseta Gráfica</h3>
+          <p>$35.00</p>
+          <a href="carrito.html" class="btn">Agregar al carrito</a>
+        </div>
+        <div class="producto">
+          <img src="IMAGENES/jeans.jpg" alt="Jeans Clásicos">
+          <h3>Jeans Clásicos</h3>
+          <p>$75.00</p>
+          <a href="carrito.html" class="btn">Agregar al carrito</a>
+        </div>
+        <div class="producto">
+          <img src="IMAGENES/zapatillas.jpg" alt="Zapatillas Retro">
+          <h3>Zapatillas Retro</h3>
+          <p>$90.00</p>
+          <a href="carrito.html" class="btn">Agregar al carrito</a>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <p>&copy; 2026 CampusShop. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>

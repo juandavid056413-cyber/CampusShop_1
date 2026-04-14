@@ -1,77 +1,220 @@
-.site-header {
+/* ====== Base: Celular (mobile-first) ====== */
+body {
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header.site-header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background: #333;
-  color: #fff;
-  padding: 10px 20px;
-  position: relative;
+  align-items: center;
+  padding: 12px 15px;
+  background: #333;        /* fondo oscuro para que el hamburger sea visible */
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
 
 .logo {
-  font-size: 20px;
   font-weight: bold;
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 260px;
-  height: 100%;
-  background: #fff;
-  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-  z-index: 70;
-}
-
-.menu-links {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.menu-item {
-  margin-bottom: 12px;
-}
-
-.menu-item a {
-  color: #111;
-  font-weight: 500;
-  display: block;
-  padding: 8px 0;
-}
-
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.3);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 60;
+  font-size: 18px;
+  color: #fff;             /* logo blanco sobre fondo oscuro */
 }
 
 .hero {
+  padding: 30px 15px;
   text-align: center;
-  padding: 100px 20px;
+}
+
+.categorias,
+.novedades {
+  padding: 20px 15px;
+}
+
+.categorias h2,
+.novedades h2,
+main h1 {
+  margin-bottom: 15px;
+}
+
+.grid-categorias,
+.grid-productos {
+  display: grid;
+  grid-template-columns: 1fr; /* una sola columna en celular */
+  gap: 15px;
+}
+.grid-categorias{
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.categoria,
+.producto,
+.pedido {
+  width: 100%;
+  padding: 15px;
+  font-size: 14px;
   background: #f4f4f4;
+  border-radius: 8px;
+  text-align: center;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+.producto img,
+.categoria img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+.producto h3,
+.categoria h3 {
+  margin-bottom: 8px;
+}
+
+.producto p {
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.resumen {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
 }
 
 footer {
   text-align: center;
-  padding: 20px;
-  background: #333;
+  padding: 20px 15px;
+  font-size: 13px;
+  color: #666;
+  margin-top: 30px;
+  border-top: 1px solid #eee;
+}
+
+/* Sidebar menú hamburguesa */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #222;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+#menu-toggle:checked ~ .sidebar {
+  left: 0;
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 20px 20px;  /* padding-top para no quedar debajo del header */
+}
+
+.menu-item {
+  margin-bottom: 15px;
+}
+
+.menu-item a {
   color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 500;
+}
+
+#menu-toggle:checked ~ .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu-btn {
+  cursor: pointer;
+}
+
+.hamburger {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #fff;       /* blanco para que sea visible sobre el header oscuro */
+  position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+/* ====== Tablet: pantallas medianas desde 600px ====== */
+@media (min-width: 600px) {
+  .grid-categorias {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pedido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* ====== Computador: pantallas grandes desde 1024px ====== */
+@media (min-width: 1024px) {
+  .grid-categorias {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid-productos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .carrito, .historial, .catalogo, .novedades {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+}
+
+.busqueda {
+  padding: 15px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 15px;
+  
 }
