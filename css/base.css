@@ -16,3 +16,13 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/* ====== Botón global ====== */
+.btn {
+  background: #6a1b9a;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+}

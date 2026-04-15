@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusShop - Checkout</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <input type="checkbox" id="menu-toggle" hidden>
+
+  <nav class="sidebar">
+    <div class="menu-links">
+      <div class="menu-item"><a href="index.html">Inicio</a></div>
+      <div class="menu-item"><a href="catalogo.html">Catálogo</a></div>
+      <div class="menu-item"><a href="carrito.html">Carrito</a></div>
+      <div class="menu-item"><a href="checkout.html">Checkout</a></div>
+      <div class="menu-item"><a href="historial.html">Historial</a></div>
+      <div class="menu-item"><a href="perfil.html">Perfil</a></div>
+      <div class="menu-item"><a href="producto.html">Producto</a></div>
+      <div class="menu-item"><a href="vacio.html">Vacío</a></div>
+    </div>
+  </nav>
+
+  <label for="menu-toggle" class="overlay"></label>
+
+  <header class="site-header">
+    <label for="menu-toggle" class="menu-btn">
+      <span class="hamburger"></span>
+    </label>
+    <div class="logo">CampusShop</div>
+  </header>
+
+  <main style="padding: 20px;">
+    <h1>Checkout</h1>
+
+    <div style="margin-top: 20px;">
+      <h2>Datos de envío</h2>
+      <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 15px;">
+        <input type="text" placeholder="Nombre completo" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 15px;">
+        <input type="text" placeholder="Dirección" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 15px;">
+        <input type="text" placeholder="Ciudad" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 15px;">
+        <input type="text" placeholder="Teléfono" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 15px;">
+      </div>
+    </div>
+
+    <div style="margin-top: 30px;">
+      <h2>Resumen del pedido</h2>
+      <div class="resumen" style="text-align: left; margin-top: 15px;">
+        <p>Subtotal: <strong>$320.00</strong></p>
+        <p>Envío: <strong>$10.00</strong></p>
+        <p style="font-size: 18px; margin-top: 10px;">Total: <strong>$330.00</strong></p>
+      </div>
+    </div>
+
+    <div style="margin-top: 30px;">
+      <a href="historial.html" class="btn" style="width: 100%; display: block; text-align: center; padding: 14px;">Confirmar pedido</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 CampusShop. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

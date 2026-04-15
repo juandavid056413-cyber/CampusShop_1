@@ -216,5 +216,75 @@ footer {
   border: 1px solid #ccc;
   border-radius: 25px;
   font-size: 15px;
-  
+
 }
+
+.categoria img{
+  width: 70px;
+  height: 70px;
+}
+
+/* ====== Detalle de producto ====== */
+.detalle-producto .imagen-principal {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* ====== Carrito ====== */
+.producto-carrito {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* ====== Perfil ====== */
+.enlaces-perfil {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* ====== Pantalla vacía ====== */
+.vacio img {
+  opacity: 0.8;
+}
+
+/* ====== Carrito ====== */
+.carrito h1 {
+  margin-bottom: 20px;
+}
+
+.producto-carrito {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.resumen {
+  margin-top: 20px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.resumen p {
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+/* ====== Ajuste de layout para carrito ====== */
+main {
+  padding-top: 100px; /* espacio para que el carrito fijo no se superponga */
+}
+

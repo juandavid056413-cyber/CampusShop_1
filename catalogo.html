@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusShop - Catálogo</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <input type="checkbox" id="menu-toggle" hidden>
+
+  <nav class="sidebar">
+    <div class="menu-links">
+      <div class="menu-item"><a href="index.html">Inicio</a></div>
+      <div class="menu-item"><a href="catalogo.html">Catálogo</a></div>
+      <div class="menu-item"><a href="carrito.html">Carrito</a></div>
+      <div class="menu-item"><a href="checkout.html">Checkout</a></div>
+      <div class="menu-item"><a href="historial.html">Historial</a></div>
+      <div class="menu-item"><a href="perfil.html">Perfil</a></div>
+      <div class="menu-item"><a href="producto.html">Producto</a></div>
+      <div class="menu-item"><a href="vacio.html">Vacío</a></div>
+    </div>
+  </nav>
+
+  <label for="menu-toggle" class="overlay"></label>
+
+  <header class="site-header">
+    <label for="menu-toggle" class="menu-btn">
+      <span class="hamburger"></span>
+    </label>
+    <div class="logo">CampusShop</div>
+  </header>
+
+  <main class="catalogo">
+    <h1>Categorías</h1>
+    <div class="filtros">
+  <span class="filtro">Talla</span>
+  <span class="filtro">Color</span>
+  <span class="filtro">Precio</span>
+  </div>
+
+    <div class="grid-categorias">
+      <div class="categoria">
+        <h2>Electrónica</h2>
+        <a href="producto.html" class="btn">Ver más</a>
+      </div>
+      <div class="categoria">
+        <h2>Ropa</h2>
+        <a href="producto.html" class="btn">Ver más</a>
+      </div>
+      <div class="categoria">
+        <h2>Accesorios</h2>
+        <a href="producto.html" class="btn">Ver más</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 CampusShop. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

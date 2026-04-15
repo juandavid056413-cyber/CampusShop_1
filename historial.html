@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusShop - Historial</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <input type="checkbox" id="menu-toggle" hidden>
+
+  <nav class="sidebar">
+    <div class="menu-links">
+      <div class="menu-item"><a href="index.html">Inicio</a></div>
+      <div class="menu-item"><a href="catalogo.html">Catálogo</a></div>
+      <div class="menu-item"><a href="carrito.html">Carrito</a></div>
+      <div class="menu-item"><a href="checkout.html">Checkout</a></div>
+      <div class="menu-item"><a href="historial.html">Historial</a></div>
+      <div class="menu-item"><a href="perfil.html">Perfil</a></div>
+      <div class="menu-item"><a href="producto.html">Producto</a></div>
+      <div class="menu-item"><a href="vacio.html">Vacío</a></div>
+    </div>
+  </nav>
+
+  <label for="menu-toggle" class="overlay"></label>
+
+  <header class="site-header">
+    <label for="menu-toggle" class="menu-btn">
+      <span class="hamburger"></span>
+    </label>
+    <div class="logo">CampusShop</div>
+  </header>
+
+  <main class="historial" style="padding: 20px;">
+    <h1>Historial de pedidos</h1>
+
+    <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 15px;">
+
+      <div class="pedido">
+        <div>
+          <strong>Pedido #001</strong>
+          <p>Chaqueta de Cuero × 1</p>
+          <p style="font-size: 13px; color: #666;">12 abril 2026</p>
+        </div>
+        <div>
+          <p><strong>$120.00</strong></p>
+          <span style="background: #4caf50; color: #fff; padding: 3px 10px; border-radius: 20px; font-size: 12px;">Entregado</span>
+        </div>
+      </div>
+
+      <div class="pedido">
+        <div>
+          <strong>Pedido #002</strong>
+          <p>Camiseta Gráfica × 2</p>
+          <p style="font-size: 13px; color: #666;">10 abril 2026</p>
+        </div>
+        <div>
+          <p><strong>$70.00</strong></p>
+          <span style="background: #ff9800; color: #fff; padding: 3px 10px; border-radius: 20px; font-size: 12px;">En camino</span>
+        </div>
+      </div>
+
+      <div class="pedido">
+        <div>
+          <strong>Pedido #003</strong>
+          <p>Zapatillas Retro × 1</p>
+          <p style="font-size: 13px; color: #666;">5 abril 2026</p>
+        </div>
+        <div>
+          <p><strong>$90.00</strong></p>
+          <span style="background: #2196f3; color: #fff; padding: 3px 10px; border-radius: 20px; font-size: 12px;">Procesando</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 CampusShop. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

@@ -42,3 +42,51 @@
 
 .hamburger::before { top: -6px; }
 .hamburger::after { bottom: -6px; }
+/* ====== Carrito panel ====== */
+.carrito {
+  max-width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.producto-carrito {
+  display: flex;
+  justify-content: space-between;
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.resumen {
+  margin-top: 20px;
+  background: #eee;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* ====== Icono de carrito ====== */
+.icono-carrito {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2000;
+}
+
+.icono-carrito img {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icono-carrito img:hover {
+  transform: scale(1.1);
+}
+

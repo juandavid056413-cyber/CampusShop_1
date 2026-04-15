@@ -22,3 +22,22 @@
     bottom: 0;
   }
 }
+
+/* ====== Responsive carrito ====== */
+@media (max-width: 600px) {
+  .carrito {
+    position: static;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .icono-carrito {
+    top: 15px;
+    right: 15px;
+  }
+
+  .icono-carrito img {
+    width: 32px;
+  }
+}
+
