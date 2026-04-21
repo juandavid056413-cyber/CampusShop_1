@@ -11,7 +11,7 @@ header.site-header {
   justify-content: space-between;
   align-items: center;
   padding: 12px 15px;
-  background: #333;        /* fondo oscuro para que el hamburger sea visible */
+  background: #6a1b9a;        /* fondo oscuro para que el hamburger sea visible */
   position: sticky;
   top: 0;
   z-index: 50;
@@ -286,5 +286,29 @@ footer {
 /* ====== Ajuste de layout para carrito ====== */
 main {
   padding-top: 100px; /* espacio para que el carrito fijo no se superponga */
+}
+
+/* ====== Navegación principal ====== */
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  background: #6a1b9a; /* morado institucional */
+  padding: 18px 0;
+}
+
+header nav a {
+  color: #fff;
+  font-size: 20px;       /* más grande */
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+header nav a:hover,
+header nav a.activo {
+  background: #4caf50;   /* verde al pasar el mouse o activo */
 }
 

@@ -8,7 +8,7 @@ html, body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   background: #d2f0f3;
-  color: #333;
+  color: #6a1b9a;
   height: 100%;
 }
 
@@ -25,4 +25,19 @@ a {
   border-radius: 5px;
   text-decoration: none;
   display: inline-block;
+}
+
+/* ====== Colores globales ====== */
+:root {
+  --color-principal: #6a1b9a;   /* morado */
+  --color-secundario: #4caf50;  /* verde */
+  --color-fondo: #e3f2fd;       /* azul claro */
+  --color-card: #ffffff;        /* blanco */
+  --color-texto: #333333;       /* gris oscuro */
+}
+
+body {
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: Arial, sans-serif;
 }

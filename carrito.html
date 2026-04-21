@@ -1,26 +1,68 @@
-<main class="carrito" style="padding:20px;">
-  <h1>Tu Carrito</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito - CampusShop</title>
+  <!-- Estilos globales -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- Estilos específicos del carrito -->
+  <link rel="stylesheet" href="css/carrito.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="carrito.html" class="activo">Carrito</a>
+      <a href="perfil.html">Perfil</a>
+    </nav>
+  </header>
 
-  <div class="producto-carrito">
-    <p>Chaqueta de Cuero × 1</p>
-    <p>$120.00</p>
-  </div>
+  <main class="carrito">
+    <h1>Mi Carrito</h1>
 
-  <div class="producto-carrito">
-    <p>Camiseta Gráfica × 2</p>
-    <p>$70.00</p>
-  </div>
+    <div class="grid-carrito">
+      <div class="producto-carrito">
+        <img src="IMAGENES/chaqueta.png" alt="Chaqueta">
+        <div class="info-producto">
+          <h3>Chompa azul celeste Jordan</h3>
+          <p>$150.000</p>
+          <a href="checkout.html" class="btn-secundario">Proceder al pago</a>
+        </div>
+      </div>
 
-  <div class="producto-carrito">
-    <p>Zapatos Deportivos × 1</p>
-    <p>$90.00</p>
-  </div>
+      <div class="producto-carrito">
+        <img src="IMAGENES/image.png" alt="Camiseta">
+        <div class="info-producto">
+          <h3>Camiseta negra Jordan</h3>
+          <p>$120.000</p>
+          <a href="checkout.html" class="btn-secundario">Proceder al pago</a>
+        </div>
+      </div>
 
-  <div class="resumen">
-    <p>Subtotal: <strong>$280.00</strong></p>
-    <p>Envío: <strong>$10.00</strong></p>
-    <p>Total: <strong>$290.00</strong></p>
-  </div>
+      <div class="producto-carrito">
+        <img src="IMAGENES/JR1.png" alt="Tenis">
+        <div class="info-producto">
+          <h3>Tenis Jordan</h3>
+          <p>$90.000</p>
+          <a href="checkout.html" class="btn-secundario">Proceder al pago</a>
+        </div>
+      </div>
+    </div>
 
-  <a href="checkout.html" class="btn">Proceder al pago</a>
-</main>
+    <div class="resumen-carrito">
+      <h2>Resumen del pedido</h2>
+      <p><strong>Total:</strong> $360.000</p>
+      <a href="checkout.html" class="btn-principal">Finalizar compra</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 CampusShop. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

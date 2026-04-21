@@ -1,0 +1,56 @@
+/* ====== Perfil ====== */
+.perfil {
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card-perfil {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 25px;
+  margin-bottom: 30px;
+  transition: transform 0.2s ease;
+}
+
+.card-perfil:hover {
+  transform: translateY(-5px);
+}
+
+.avatar img {
+  width: 60px !important;   /* tamaño más pequeño */
+  height: 60px !important;
+  border-radius: 50%;       /* circular */
+  margin-right: 20px;
+  border: 2px solid #6a1b9a; /* borde morado */
+  object-fit: cover;        /* evita deformaciones */
+}
+
+.info-perfil p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #444;
+}
+
+.acciones-perfil {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn-secundario {
+  background: #4caf50;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-secundario:hover {
+  background: #388e3c;
+}

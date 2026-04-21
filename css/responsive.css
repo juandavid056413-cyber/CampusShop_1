@@ -41,3 +41,39 @@
   }
 }
 
+/* ====== Perfil ====== */
+.perfil {
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card-perfil {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+  border: 3px solid #6a1b9a;
+}
+
+.info-perfil p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.acciones-perfil {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
