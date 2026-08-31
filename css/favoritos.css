@@ -1,0 +1,84 @@
+/* ============================
+   Wishlist (Favoritos)
+   ============================ */
+
+.favoritos .subtitulo {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+/* Botón "Mover todo al carrito" */
+#btn-mover-todo {
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+/* La card .producto ya viene del catálogo (components.css).
+   Aquí solo la ajustamos para poder posicionar íconos encima. */
+.grid-favoritos .favorito {
+  position: relative;
+}
+
+/* Requisito 1: botón Eliminar en la esquina superior (basurero / X) */
+.btn-eliminar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  color: #c0392b;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+  z-index: 2;
+}
+
+.btn-eliminar:hover {
+  background: #c0392b;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Requisito 2: ícono de corazón relleno (color sólido) por defecto */
+.icono-corazon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 22px;
+  color: #e63950;
+  line-height: 1;
+  z-index: 2;
+}
+
+/* Requisito 4 (Bonus): Empty State centrado con Flexbox */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  gap: 12px;
+}
+
+.empty-state .empty-icono {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.empty-state p {
+  font-size: 17px;
+  color: #666;
+  margin-bottom: 10px;
+}
