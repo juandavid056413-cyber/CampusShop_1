@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusShop - Mis Favoritos</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/favoritos.css">
+</head>
+<body>
+  <input type="checkbox" id="menu-toggle" hidden>
+
+  <nav class="sidebar">
+    <div class="menu-links">
+      <div class="menu-item"><a href="index.html">Inicio</a></div>
+      <div class="menu-item"><a href="catalogo.html">Catálogo</a></div>
+      <div class="menu-item"><a href="carrito.html">Carrito</a></div>
+      <div class="menu-item"><a href="checkout.html">Checkout</a></div>
+      <div class="menu-item"><a href="historial.html">Historial</a></div>
+      <div class="menu-item"><a href="perfil.html">Perfil</a></div>
+      <div class="menu-item"><a href="favoritos.html" class="activo">Favoritos</a></div>
+      <div class="menu-item"><a href="producto.html">Producto</a></div>
+    </div>
+  </nav>
+
+  <label for="menu-toggle" class="overlay"></label>
+
+  <header class="site-header">
+    <label for="menu-toggle" class="menu-btn">
+      <span class="hamburger"></span>
+    </label>
+    <div class="logo">CampusShop</div>
+  </header>
+
+  <main class="favoritos">
+    <h1>Mis Favoritos</h1>
+    <p class="subtitulo">Los productos que guardaste, listos para comprar.</p>
+
+    <button id="btn-mover-todo" class="btn-principal" onclick="moverTodoAlCarrito()">
+      Mover todo al carrito
+    </button>
+
+    <div class="grid-productos grid-favoritos" id="grid-favoritos">
+      <div class="producto favorito">
+        <button class="btn-eliminar" title="Quitar de favoritos" onclick="eliminarFavorito(this)">✕</button>
+        <span class="icono-corazon">&#9829;</span>
+        <img src="IMAGENES/chaqueta.png" alt="Chompa azul celeste Jordan">
+        <h3>Chompa azul celeste Jordan</h3>
+        <p>$150.000</p>
+        <a href="carrito.html" class="btn">Agregar al carrito</a>
+      </div>
+      <div class="producto favorito">
+        <button class="btn-eliminar" title="Quitar de favoritos" onclick="eliminarFavorito(this)">✕</button>
+        <span class="icono-corazon">&#9829;</span>
+        <img src="IMAGENES/image.png" alt="Camiseta negra Jordan">
+        <h3>Camiseta negra Jordan</h3>
+        <p>$120.000</p>
+        <a href="carrito.html" class="btn">Agregar al carrito</a>
+      </div>
+      <div class="producto favorito">
+        <button class="btn-eliminar" title="Quitar de favoritos" onclick="eliminarFavorito(this)">✕</button>
+        <span class="icono-corazon">&#9829;</span>
+        <img src="IMAGENES/JR1.png" alt="Tenis Jordan">
+        <h3>Tenis Jordan</h3>
+        <p>$190.000</p>
+        <a href="carrito.html" class="btn">Agregar al carrito</a>
+      </div>
+    </div>
+
+    <!--
+    <div class="empty-state">
+      <div class="empty-icono">🤍</div>
+      <p>Tu lista de deseos está vacía</p>
+      <a href="catalogo.html" class="btn">Ver catálogo</a>
+    </div>
+    -->
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 CampusShop. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function eliminarFavorito(boton) {
+      const card = boton.closest('.favorito');
+      card.remove();
+      verificarVacio();
+    }
+    function moverTodoAlCarrito() {
+      const cards = document.querySelectorAll('#grid-favoritos .favorito');
+      if (cards.length === 0) return;
+      alert('Se movieron ' + cards.length + ' producto(s) al carrito 🛒');
+      cards.forEach(card => card.remove());
+      verificarVacio();
+    }
+    function verificarVacio() {
+      const grid = document.getElementById('grid-favoritos');
+      if (grid && grid.children.length === 0 && !document.querySelector('.empty-state')) {
+        grid.insertAdjacentHTML('afterend', `
+          <div class="empty-state">
+            <div class="empty-icono">🤍</div>
+            <p>Tu lista de deseos está vacía</p>
+            <a href="catalogo.html" class="btn">Ver catálogo</a>
+          </div>
+        `);
+      }
+    }
+  </script>
+</body>
+</html>
